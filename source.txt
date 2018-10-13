@@ -1,0 +1,120 @@
+"Calling A Friend"
+[ Told to the computer in simple words. ]
+
+Part - Rooms and Things
+
+The Hill Top is a room. "A large house full of books stands before you. The door leading inside looks a little more worn than last time you came here.[first time]
+
+You traveled up here to talk to an old friend. You know exactly what to do: she's waiting inside.[only]"
+
+The Hall is a dark room. It is inside from the Hill Top. A desk is here. "A desk is here, but nobody is sitting at it. A paper note on the desk reads:
+
+'I'm some-when else right now. Feel free to help yourself to anything. (Sorry, I have the time travel books.)'
+
+[first time]Well, you'll have to call your friend by yourself, then. Spirit-calling isn't your strong suit, but at least she won't try to give you a hard time. What was it again? 'Book, sound, and light'? [only]The books are east from here."
+
+[ "Things can be on the desk." ]
+A cat is on the desk. When play begins: remove the cat from play.
+
+Before going to the Hall, say "The door lets out a tired sigh as it turns, and once it falls shut behind you, [if room is dark]darkness is everywhere[else]warm soft light makes you feel at home[end if]."
+
+Every turn, if in darkness for the second turn and the Hall is dark, say "Oh, right -- you remember that if you want light in here, you just need to ask for it."
+
+The Book Area is a dark room. It is east from the Hall. "A huge room full of rows upon rows of thick books. The one you need is not very high up, so that's lucky."
+
+A row is a kind of thing.
+A row is usually fixed in place.
+The row of books on Callings is a row in the Book Area.
+The row of books on Time Travel is a row in the Book Area.
+The row of books on Fire is a row in the Book Area.
+The spirit book is a thing.
+
+Instead of searching Callings:
+	say "After a short walk the row of books on Callings, holding your finger up to the backs of the books, you spot the one you need! It's 'On Calling Spirits.' You page through it: it's mostly names and strange words that act as phone numbers. You take it along with you.";
+	now the player has the spirit book.
+
+Instead of searching Time Travel:
+	say "Many of the books in this row are missing, and all the others don't really matter to you. You wonder how just many books it takes to make one trip back in time, though..."
+
+Instead of searching Fire:
+	say "You have to admit all of these books look really cool. But you decide not to play around with them. You didn't come here to burn your hair off."
+
+Instead of doing something other than searching to a row:
+	say "The books go up much higher than you can reach. You could SEARCH the bottom row, though: that's where they keep the easy ones."
+
+Instead of doing something other than taking or dropping or putting or removing to the spirit book:
+	say "The book looks a little hard to make sense of. But all you need to do is put it down somewhere, opened to the right page, and let that page's spirit find your sound and light."
+
+After putting the spirit book on the desk:
+	say "You leave the book open to the right page on the desk. Okay, that's one step done."
+
+Part - The Calling
+[ Sound, book, and light. That's how you call a spirit! ]
+
+A thing can be ringing. Rose is a person.
+
+Understand "ask for light" or "let there be light" or "light the/-- room/-- please" or "please light the/-- room" as jumping.
+
+[ We'll use "jumping" because we don't have enough words to tell the computer about something new called "asking for light". ]
+Instead of jumping:
+	if the player is in the Hill Top:
+		say "Those words hold no power outside of the book house.";
+	else if in darkness:
+		now the Hall is lit;
+		now the Book Area is lit;
+		say "As the words leave your lips, the room becomes lit with hundreds of quiet, tiny red lights.";
+	else if the player is in the Hall and the spirit book is on the desk:
+		if the glass ball is ringing:
+			say "Finally, you speak the words again: 'Let there be light!' And the words on the page light up, then smoke pours up from them. A wind begins to rush through the room, shaping the smoke into your friend Rose's image.
+		
+			She's facing the wrong way, and going: 'Hello? Hello?' That's so her.";
+			[ Stop the timers: ]
+			the ringing continues in -1 turns from now;
+			the ringing stops in -1 turns from now;
+			now Rose is in the Hall;
+		else:
+			say "You ask the light-spirits for light once more. The words on the page light up for a very short while, then fade again. It seems the spirit you're calling needs some more help getting through.";
+	else:
+		say "The light-spirits hear you loud and clear, but the book house is already lit."
+
+A glass ball is in the Hall. "A glass ball hangs still in the air above the desk. You don't know what's keeping it up."
+
+After doing something other than taking or touching to the glass ball for the first time:
+	say "Maybe if you touch it...?"
+
+Instead of taking the glass ball:
+	try touching the glass ball.
+
+Instead of touching the glass ball:
+	if the spirit book is on the desk:
+		say "You touch the glass ball, and the book on the desk begins to shake as it sounds. Okay, yes, that's step two. What now?!";
+	else:
+		say "[one of]As soon as you touch the glass ball, a loud but sweet sound fills up the room. Surprised, you let go of it. Guess this is how you get help from the desk person -- but they're not even here.[or]You touch the glass ball again, and it sounds once more, warm and sweet. This time, giving it a little push, you notice it actually won't move at all.[or]The glass ball makes its familiar, sweet ringing sound.[stopping]";
+	now the glass ball is ringing;
+	the ringing continues in one turn from now;
+	the ringing stops in two turns from now.
+
+At the time when the ringing continues:
+	say "The ringing continues, slowly fading away over time."
+
+At the time when the ringing stops:
+	say "The glass ball's ringing finally stops.";
+	now the glass ball is not ringing.
+
+Instead of answering Rose that:
+	say "She turns around and smiles. 'Carry! I thought you finally got sick of me,' she jokes. You sit down at the desk, and her clouded shadow follows suit. This place feels a lot nicer to be in, now that she's here.
+	
+	'We have a whole lot of catching up to do, don't we?'";
+	end the story finally.
+
+Instead of kissing Rose:
+	say "That would be crossing a line. But you do plan on telling her about your feelings this time."
+
+Part - Release
+
+Test me with "in / ask for light / east / search callings / west / put book on desk / touch glass / ask for light / say hi".
+
+Release along with the source text.
+
+
+Release along with an interpreter.
