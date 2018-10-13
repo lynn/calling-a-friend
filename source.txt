@@ -3,9 +3,11 @@
 
 Part - Rooms and Things
 
-The Hill Top is a room. "A large house full of books stands before you. The door leading inside looks a little more worn than last time you came here.[first time]
+The Hill Top is a room. A large house is here. "A large house full of books stands before you. The door leading inside looks a little more worn than last time you came here.[first time]
 
 You traveled up here to talk to an old friend. You know exactly what to do: she's waiting inside.[only]"
+
+Instead of entering the house: try going inside.
 
 The Hall is a dark room. It is inside from the Hill Top. A desk is here. "A desk is here, but nobody is sitting at it. A paper note on the desk reads:
 
@@ -45,8 +47,14 @@ Instead of doing something other than searching to a row:
 Instead of doing something other than taking or dropping or putting or removing to the spirit book:
 	say "The book looks a little hard to make sense of. But all you need to do is put it down somewhere, opened to the right page, and let that page's spirit find your sound and light."
 
+Instead of dropping the spirit book when the player is in the Hall:
+	try putting the spirit book on the desk.
+
 After putting the spirit book on the desk:
 	say "You leave the book open to the right page on the desk. Okay, that's one step done."
+
+After dropping the spirit book:
+	say "Done. It's hard to work with the book on the floor like this, though..."
 
 Part - The Calling
 [ Sound, book, and light. That's how you call a spirit! ]
