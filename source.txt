@@ -3,14 +3,14 @@
 
 Part - Rooms and Things
 
-The Hill Top is a room. A large house is here. " "
-
-The book house door is an open door.  The book house door is inside from the Hill Top and outside from the Hall. "A large house full of books stands before you. The door leading inside looks a little more worn than last time you came here.[first time]
+The Hill Top is a room. A large house is here. "A large house full of books stands before you. The door leading inside looks a little more worn than last time you came here.[first time]
 
 You traveled up here to talk to an old friend. You know exactly what to do: she's waiting inside.[only]"
 
-Instead of opening the door:  try going inside.
-Instead of entering the house: try going inside.
+The house door is an open door.  The house door is inside from the Hill Top and outside from the Hall. " "
+
+Instead of opening the house door:  try entering the house door.
+Instead of entering the large house: try going inside.
 
 The Hall is a dark room. A desk is here. "A desk is here, but nobody is sitting at it. A paper note on the desk reads:
 
@@ -70,7 +70,7 @@ Part - The Calling
 
 A thing can be ringing. Rose is a person.
 
-Understand "ask for light" or "let there be light" or "light the/-- room/-- please" or "please light the/-- room" as jumping.
+Understand "ask for/-- light/lights" or "let there be light/lights" or "light the/-- room/-- please" or "lights please" or "please light the/-- room" as jumping.
 
 [ We'll use "jumping" because we don't have enough words to tell the computer about something new called "asking for light". ]
 Instead of jumping:
@@ -138,7 +138,7 @@ The story title is "Calling A Friend".
 The story author is "Lynn". 
 The story headline is "A story in easy words". 
 The story genre is "Fantasy". 
-The release number is 3. 
+The release number is 4. 
 The story description is "A story whose prose and source code are both constrained to the limited set of words from 'Thing Explainer: Complicated Stuff in Simple Words.'" 
 The story creation year is 2018.
 
