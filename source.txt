@@ -3,13 +3,16 @@
 
 Part - Rooms and Things
 
-The Hill Top is a room. A large house is here. "A large house full of books stands before you. The door leading inside looks a little more worn than last time you came here.[first time]
+The Hill Top is a room. A large house is here. " "
+
+The book house door is an open door.  The book house door is inside from the Hill Top and outside from the Hall. "A large house full of books stands before you. The door leading inside looks a little more worn than last time you came here.[first time]
 
 You traveled up here to talk to an old friend. You know exactly what to do: she's waiting inside.[only]"
 
+Instead of opening the door:  try going inside.
 Instead of entering the house: try going inside.
 
-The Hall is a dark room. It is inside from the Hill Top. A desk is here. "A desk is here, but nobody is sitting at it. A paper note on the desk reads:
+The Hall is a dark room. A desk is here. "A desk is here, but nobody is sitting at it. A paper note on the desk reads:
 
 'I'm some-when else right now. Feel free to help yourself to anything. (Sorry, I have the time travel books.)'
 
@@ -31,6 +34,9 @@ The row of books on Time Travel is a row in the Book Area.
 The row of books on Fire is a row in the Book Area.
 The spirit book is a thing.
 
+After looking in the Book Area:
+	say "Many other rows of books are here, but they're so high up you can't reach them."
+
 Instead of searching Callings:
 	say "After a short walk the row of books on Callings, holding your finger up to the backs of the books, you spot the one you need! It's 'On Calling Spirits.' You page through it: it's mostly names and strange words that act as phone numbers. You take it along with you.";
 	now the player has the spirit book.
@@ -42,13 +48,16 @@ Instead of searching Fire:
 	say "You have to admit all of these books look really cool. But you decide not to play around with them. You didn't come here to burn your hair off."
 
 Instead of doing something other than searching to a row:
-	say "The books go up much higher than you can reach. You could SEARCH the bottom row, though: that's where they keep the easy ones."
+	say "The books go up much higher than you can reach. You could SEARCH these few rows you can reach, though: that's where they keep the easy ones."
 
 Instead of doing something other than taking or dropping or putting or removing to the spirit book:
 	say "The book looks a little hard to make sense of. But all you need to do is put it down somewhere, opened to the right page, and let that page's spirit find your sound and light."
 
 Instead of dropping the spirit book when the player is in the Hall:
 	try putting the spirit book on the desk.
+
+Understand "set [something] on [something]" as putting it on.
+Understand "place [something] on [something]" as putting it on.
 
 After putting the spirit book on the desk:
 	say "You leave the book open to the right page on the desk. Okay, that's one step done."
@@ -75,7 +84,7 @@ Instead of jumping:
 		if the glass ball is ringing:
 			say "Finally, you speak the words again: 'Let there be light!' And the words on the page light up, then smoke pours up from them. A wind begins to rush through the room, shaping the smoke into your friend Rose's image.
 		
-			She's facing the wrong way, and going: 'Hello? Hello?' That's so her.";
+			She's facing the wrong way, and going: 'Hello? Hello?' at nothing. That's so her.";
 			[ Stop the timers: ]
 			the ringing continues in -1 turns from now;
 			the ringing stops in -1 turns from now;
@@ -110,19 +119,27 @@ At the time when the ringing stops:
 	now the glass ball is not ringing.
 
 Instead of answering Rose that:
-	say "She turns around and smiles. 'Carry! I thought you finally got sick of me,' she jokes. You sit down at the desk, and her clouded shadow follows suit. This place feels a lot nicer to be in, now that she's here.
+	say "She turns around and smiles. 'Oh! Carry! I thought you finally got sick of me,' she jokes. You sit down at the desk, and her clouded shadow follows suit. This place feels a lot nicer to be in, now that she's here.
 	
 	'We have a whole lot of catching up to do, don't we?'";
 	end the story finally.
 
 Instead of kissing Rose:
-	say "That would be crossing a line. But you do plan on telling her about your feelings this time."
+	say "That would be crossing a line. But you do plan on telling her about those feelings this time."
 
-Part - Release
+Instead of doing anything to Rose: [ Looking at her, we hope. ]
+	say "The line you're calling over is very clear, so you can get a good look: her pretty face, her short rock-star hair, her tired expression. Spirit form has been kind on her, all things considered."
+
+Part - Hard words to make the game work
 
 Test me with "in / ask for light / east / search callings / west / put book on desk / touch glass / ask for light / say hi".
 
-Release along with the source text.
+The story title is "Calling A Friend". 
+The story author is "Lynn". 
+The story headline is "A story in easy words". 
+The story genre is "Fantasy". 
+The release number is 3. 
+The story description is "A story whose prose and source code are both constrained to the limited set of words from 'Thing Explainer: Complicated Stuff in Simple Words.'" 
+The story creation year is 2018.
 
-
-Release along with an interpreter.
+Release along with the source text and an interpreter.
